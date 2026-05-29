@@ -159,7 +159,7 @@ function cardHTML(p) {
           </div>
           <div class="spec-item">
             <span class="spec-label">單價</span>
-            <span class="spec-value">${p.unitPriceMin}~${p.unitPriceMax}萬/坪</span>
+            <span class="spec-value">${p.unitPriceMin && p.unitPriceMax ? `${p.unitPriceMin}~${p.unitPriceMax}萬/坪` : '洽詢'}</span>
           </div>
           <div class="spec-item">
             <span class="spec-label">坪數</span>
