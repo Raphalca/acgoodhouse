@@ -1,0 +1,93 @@
+{
+  "id": "huashu-xindian-2025",
+  "name": "華垿",
+  "city": "新北市",
+  "district": "新店區",
+  "address": "新北市新店區中央四街103、105號",
+  "type": "預售屋",
+  "description": "中央新村生活圈新建案，規劃21~26坪｜2房，戶戶雙面採光衛浴開窗。",
+  "highlights": [
+    "戶戶雙面採光",
+    "衛浴開窗",
+    "日本住友制震",
+    "耐震6級",
+    "無店面"
+  ],
+  "sizeMin": 21,
+  "sizeMax": 26,
+  "roomsOptions": [
+    2
+  ],
+  "bathroomsOptions": [
+    1,
+    2
+  ],
+  "unitPriceMin": 85,
+  "unitPriceMax": 93,
+  "totalPriceMin": 1774,
+  "unitPriceNote": "",
+  "mrtStation": "新店區公所站",
+  "mrtMinutes": 10,
+  "mrtLine": "新店線",
+  "siteArea": 115,
+  "floors": 11,
+  "basementFloors": 2,
+  "totalUnits": 30,
+  "floorPlan": "1梯3戶",
+  "parkingSpots": 14,
+  "parkingType": "倉儲車位",
+  "parkingPrice": 220,
+  "publicRatio": 33.2,
+  "hasStorefront": false,
+  "earthquake": "耐震6級",
+  "damper": "日本住友制震",
+  "layouts": [
+    {
+      "size": 21,
+      "rooms": 2,
+      "bathrooms": 1,
+      "note": "2房1衛"
+    },
+    {
+      "size": 25,
+      "rooms": 2,
+      "bathrooms": 1,
+      "note": "2房1衛"
+    },
+    {
+      "size": 26,
+      "rooms": 2,
+      "bathrooms": 2,
+      "note": "2房2衛"
+    }
+  ],
+  "openSaleDate": "2025-06-13",
+  "viewingDate": "2025-06-01",
+  "earlyBirdNote": "6/13（六）早鳥開賣，6/1（一）開放賞屋，可跟阿欽預約優先賞屋。早鳥折扣後續提供，實際價格以現場為主。",
+  "payment": {
+    "deposit": 8,
+    "stages": [
+      {
+        "label": "使照申請",
+        "percentage": 6,
+        "estimate": "2026年Q4"
+      },
+      {
+        "label": "使照取得",
+        "percentage": 6,
+        "estimate": "2027年Q2"
+      }
+    ],
+    "loan": 75,
+    "loanEstimate": "2027年Q3交屋",
+    "delivery": 5
+  },
+  "materials": {
+    "kitchen": "國際牌櫥櫃、林內三機",
+    "bathroom": "國際牌全自動馬桶、INAX面盆＆五金、台達電暖風機",
+    "other": "Studor吸氣閥、80x80磁磚"
+  },
+  "images": [],
+  "postedDate": "2025-05-29",
+  "featured": true
+}

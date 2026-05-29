@@ -1,0 +1,105 @@
+{
+  "id": "dangdai-dibao-taishan",
+  "name": "當代帝寶",
+  "city": "新北市",
+  "district": "泰山區",
+  "address": "新北市泰山區明志路三段548號",
+  "type": "預售屋",
+  "description": "丹鳳站生活圈，規劃27~41坪｜2~3房，雙捷雙公園景觀宅，樓高3米52，蔦屋生活館進駐，10年防水保固。",
+  "highlights": [
+    "丹鳳站5分鐘",
+    "泰山貴和站6分鐘",
+    "雙捷雙公園",
+    "蔦屋生活館",
+    "樓高3米52",
+    "10年防水保固"
+  ],
+  "sizeMin": 27,
+  "sizeMax": 41,
+  "roomsOptions": [
+    2,
+    3
+  ],
+  "bathroomsOptions": [
+    2
+  ],
+  "unitPriceMin": null,
+  "unitPriceMax": null,
+  "totalPriceMin": null,
+  "unitPriceNote": "開價後續提供，實際價格以現場為主",
+  "mrtStation": "丹鳳站",
+  "mrtMinutes": 5,
+  "mrtLine": "蘆洲線",
+  "siteArea": 4376,
+  "floors": 22,
+  "basementFloors": 5,
+  "totalUnits": 560,
+  "floorPlan": "3梯7戶（住宅棟）",
+  "parkingSpots": null,
+  "parkingType": "坡平車位",
+  "parkingPrice": null,
+  "publicRatio": 34.8,
+  "hasStorefront": false,
+  "earthquake": "",
+  "damper": "",
+  "layouts": [
+    {
+      "size": 27,
+      "rooms": 2,
+      "bathrooms": 2,
+      "note": "2房2衛"
+    },
+    {
+      "size": 34,
+      "rooms": 3,
+      "bathrooms": 2,
+      "note": "3房2衛"
+    },
+    {
+      "size": 40,
+      "rooms": 3,
+      "bathrooms": 2,
+      "note": "3房2衛"
+    },
+    {
+      "size": 41,
+      "rooms": 3,
+      "bathrooms": 2,
+      "note": "3房2衛"
+    }
+  ],
+  "openSaleDate": "",
+  "viewingDate": "",
+  "earlyBirdNote": "已開放賞屋，可跟阿欽預約優先賞屋。開價後續提供，實際價格以現場為主。",
+  "payment": {
+    "deposit": 6,
+    "stages": [
+      {
+        "label": "地下室一樓完成",
+        "percentage": 3,
+        "estimate": ""
+      },
+      {
+        "label": "結構體完成",
+        "percentage": 3,
+        "estimate": ""
+      },
+      {
+        "label": "申請使照",
+        "percentage": 3,
+        "estimate": ""
+      }
+    ],
+    "loan": 80,
+    "loanEstimate": "",
+    "delivery": 5
+  },
+  "materials": {
+    "kitchen": "櫻花廚具、櫻花抽油煙機＆IH爐＆淨水器、Bosch洗碗機",
+    "bathroom": "凱樂超級馬桶＆面盆＆鏡櫃＆五金、國際牌暖風機",
+    "other": "昭和氣密窗、6+6膠合玻璃、德國格溫拜克全棟淨水、長庚活水、德國太格木地板、冠軍磁磚、樓高3米52"
+  },
+  "images": [],
+  "postedDate": "2025-04-01",
+  "featured": false
+}

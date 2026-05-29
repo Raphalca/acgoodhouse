@@ -1,0 +1,105 @@
+{
+  "id": "xinghe-dibao-sanchong",
+  "name": "星河帝寶",
+  "city": "新北市",
+  "district": "三重區",
+  "address": "新北市三重區仁義街95號旁",
+  "type": "預售屋",
+  "description": "仁義重劃區新建案，規劃15~29坪｜1~3房，預計2030年交屋，已開放賞屋。",
+  "highlights": [
+    "仁義重劃區",
+    "15~29坪彈性格局",
+    "10年防水保固",
+    "太格木地板"
+  ],
+  "sizeMin": 15,
+  "sizeMax": 29,
+  "roomsOptions": [
+    1,
+    2,
+    3
+  ],
+  "bathroomsOptions": [
+    1,
+    2
+  ],
+  "unitPriceMin": null,
+  "unitPriceMax": null,
+  "totalPriceMin": null,
+  "unitPriceNote": "開價後續提供，實際價格以現場為主",
+  "mrtStation": "",
+  "mrtMinutes": null,
+  "mrtLine": "",
+  "siteArea": 1002,
+  "floors": 15,
+  "basementFloors": 5,
+  "totalUnits": 281,
+  "floorPlan": "2梯10戶",
+  "parkingSpots": 285,
+  "parkingType": "坡平207個＋機械78個",
+  "parkingPrice": null,
+  "publicRatio": 34.8,
+  "hasStorefront": false,
+  "earthquake": "",
+  "damper": "",
+  "layouts": [
+    {
+      "size": 15,
+      "rooms": 1,
+      "bathrooms": 1,
+      "note": "1房1衛"
+    },
+    {
+      "size": 19,
+      "rooms": 2,
+      "bathrooms": 1,
+      "note": "2房1衛"
+    },
+    {
+      "size": 24,
+      "rooms": 2,
+      "bathrooms": 2,
+      "note": "2房2衛"
+    },
+    {
+      "size": 29,
+      "rooms": 3,
+      "bathrooms": 2,
+      "note": "3房2衛"
+    }
+  ],
+  "openSaleDate": "",
+  "viewingDate": "",
+  "earlyBirdNote": "已開放賞屋，可跟阿欽預約優先賞屋。開價後續提供，實際價格以現場為主。",
+  "payment": {
+    "deposit": 6,
+    "stages": [
+      {
+        "label": "一樓底板完成",
+        "percentage": 3,
+        "estimate": ""
+      },
+      {
+        "label": "結構體完成",
+        "percentage": 3,
+        "estimate": ""
+      },
+      {
+        "label": "申請使照",
+        "percentage": 3,
+        "estimate": ""
+      }
+    ],
+    "loan": 80,
+    "loanEstimate": "預計2030年交屋",
+    "delivery": 5
+  },
+  "materials": {
+    "kitchen": "櫻花廚具、櫻花三機＆淨水器",
+    "bathroom": "凱樂衛浴、國際牌暖風機",
+    "other": "昭和氣密窗、5+5膠合玻璃、poll-tex防霾紗窗、德國格溫拜克全棟淨水、長庚活水、德國太格木地板、冠軍磁磚"
+  },
+  "images": [],
+  "postedDate": "2025-04-18",
+  "featured": false
+}

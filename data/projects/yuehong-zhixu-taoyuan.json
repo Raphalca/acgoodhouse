@@ -1,0 +1,98 @@
+{
+  "id": "yuehong-zhixu-taoyuan",
+  "name": "岳虹知序",
+  "city": "桃園市",
+  "district": "桃園區",
+  "address": "桃園市桃園區同安街24號旁",
+  "type": "預售屋",
+  "description": "中正路生活圈，規劃24~32坪｜2~3房，藝文特區，綠線捷運G10站步行約10分鐘（G10站預計2028年完工通車），總價1450萬起。",
+  "highlights": [
+    "藝文特區",
+    "G10站10分鐘",
+    "AlfaSafe耐震",
+    "無地主戶",
+    "10年防水保固"
+  ],
+  "sizeMin": 24,
+  "sizeMax": 32,
+  "roomsOptions": [
+    2,
+    3
+  ],
+  "bathroomsOptions": [
+    2
+  ],
+  "unitPriceMin": 58,
+  "unitPriceMax": 60,
+  "totalPriceMin": 1450,
+  "unitPriceNote": "限時優惠私訊阿欽詢問，實際價格以現場為主",
+  "mrtStation": "G10站（預計2028年通車）",
+  "mrtMinutes": 10,
+  "mrtLine": "桃園捷運綠線",
+  "siteArea": 217,
+  "floors": 9,
+  "basementFloors": 2,
+  "totalUnits": 25,
+  "floorPlan": "1梯3戶",
+  "parkingSpots": 21,
+  "parkingType": "坡平車位",
+  "parkingPrice": 253,
+  "publicRatio": 34.5,
+  "hasStorefront": false,
+  "earthquake": "AlfaSafe耐震系統",
+  "damper": "",
+  "layouts": [
+    {
+      "size": 24,
+      "rooms": 2,
+      "bathrooms": 2,
+      "note": "2房2衛"
+    },
+    {
+      "size": 29,
+      "rooms": 3,
+      "bathrooms": 2,
+      "note": "3房2衛"
+    },
+    {
+      "size": 32,
+      "rooms": 3,
+      "bathrooms": 2,
+      "note": "3房2衛"
+    }
+  ],
+  "openSaleDate": "2025-05-01",
+  "viewingDate": "2025-05-01",
+  "earlyBirdNote": "已開賣，可跟阿欽預約優先賞屋。限時優惠私訊阿欽詢問，實際價格以現場為主。",
+  "payment": {
+    "deposit": 5,
+    "stages": [
+      {
+        "label": "一樓底板",
+        "percentage": 5,
+        "estimate": ""
+      },
+      {
+        "label": "上樑",
+        "percentage": 5,
+        "estimate": ""
+      },
+      {
+        "label": "使照申請",
+        "percentage": 5,
+        "estimate": ""
+      }
+    ],
+    "loan": 75,
+    "loanEstimate": "預計2027年上半年完工",
+    "delivery": 5
+  },
+  "materials": {
+    "kitchen": "國際牌櫥櫃、林內三機、svago洗碗機",
+    "bathroom": "德國Innoci一體式馬桶＆面盆、國際牌暖風機",
+    "other": "德國KRONOSPAN超耐磨地板"
+  },
+  "images": [],
+  "postedDate": "2025-05-01",
+  "featured": false
+}

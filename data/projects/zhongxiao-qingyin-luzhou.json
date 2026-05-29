@@ -1,0 +1,82 @@
+{
+  "id": "zhongxiao-qingyin-luzhou",
+  "name": "忠孝青隱",
+  "city": "新北市",
+  "district": "蘆洲區",
+  "address": "新北市蘆洲區忠孝路15號",
+  "type": "新成屋",
+  "description": "三民高中站生活圈，規劃18~27坪｜1~2房，戶戶雙面採光衛浴開窗，5/23已開賣，每戶需配車位，含車總價1800萬起。",
+  "highlights": [
+    "三民高中站2分鐘",
+    "戶戶雙面採光",
+    "衛浴開窗",
+    "TOTO衛浴",
+    "6+6膠合Low-E玻璃"
+  ],
+  "sizeMin": 18,
+  "sizeMax": 27,
+  "roomsOptions": [
+    1,
+    2
+  ],
+  "bathroomsOptions": [
+    1
+  ],
+  "unitPriceMin": 85,
+  "unitPriceMax": 90,
+  "totalPriceMin": 1800,
+  "unitPriceNote": "每戶需配車位，含車總價1800萬起",
+  "mrtStation": "三民高中站",
+  "mrtMinutes": 2,
+  "mrtLine": "蘆洲線",
+  "siteArea": 184,
+  "floors": 13,
+  "basementFloors": 3,
+  "totalUnits": 34,
+  "floorPlan": "1梯3戶",
+  "parkingSpots": 31,
+  "parkingType": "升降平面車位",
+  "parkingPrice": 250,
+  "publicRatio": 34.51,
+  "hasStorefront": false,
+  "earthquake": "",
+  "damper": "",
+  "layouts": [
+    {
+      "size": 18,
+      "rooms": 1,
+      "bathrooms": 1,
+      "note": "1房1衛"
+    },
+    {
+      "size": 27,
+      "rooms": 2,
+      "bathrooms": 1,
+      "note": "2房1衛（現場有實品屋）"
+    }
+  ],
+  "openSaleDate": "2025-05-23",
+  "viewingDate": "2025-05-23",
+  "earlyBirdNote": "5/23已開賣，可跟阿欽預約優先賞屋。每戶需配車位，實際價格以現場為主。",
+  "payment": {
+    "deposit": 10,
+    "stages": [
+      {
+        "label": "完稅款",
+        "percentage": 5,
+        "estimate": ""
+      }
+    ],
+    "loan": 80,
+    "loanEstimate": "",
+    "delivery": 5
+  },
+  "materials": {
+    "kitchen": "櫻花三機＆淨水器",
+    "bathroom": "TOTO衛浴",
+    "other": "YKKap氣密窗、6+6膠合Low-E玻璃、80x80冠軍磁磚、樓高3米4"
+  },
+  "images": [],
+  "postedDate": "2025-05-23",
+  "featured": false
+}

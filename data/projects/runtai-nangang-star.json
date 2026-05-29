@@ -1,0 +1,108 @@
+{
+  "id": "runtai-nangang-star",
+  "name": "潤泰南港之星",
+  "city": "台北市",
+  "district": "南港區",
+  "address": "台北市南港區忠孝東路七段415巷2號",
+  "type": "預售屋",
+  "description": "三鐵共構7879坪微型垂直城市，南港站步行約4分鐘，規劃16~45坪｜1~3房，樓高3米45，輕裝修規劃，預計2029年完工。",
+  "highlights": [
+    "三鐵共構",
+    "南港站4分鐘",
+    "7879坪大基地",
+    "樓高3米45",
+    "防水保固20年"
+  ],
+  "sizeMin": 16,
+  "sizeMax": 45,
+  "roomsOptions": [
+    1,
+    2,
+    3
+  ],
+  "bathroomsOptions": [
+    1,
+    2
+  ],
+  "unitPriceMin": null,
+  "unitPriceMax": null,
+  "totalPriceMin": null,
+  "unitPriceNote": "預估均160萬/坪，確切開價後續提供",
+  "mrtStation": "南港站",
+  "mrtMinutes": 4,
+  "mrtLine": "板南線／台鐵／高鐵",
+  "siteArea": 7879,
+  "floors": 37,
+  "basementFloors": 5,
+  "totalUnits": null,
+  "floorPlan": "A棟1梯13戶；B棟1梯14戶；C/D棟1梯9戶",
+  "parkingSpots": null,
+  "parkingType": "坡平車位",
+  "parkingPrice": null,
+  "publicRatio": null,
+  "hasStorefront": false,
+  "earthquake": "",
+  "damper": "",
+  "layouts": [
+    {
+      "size": 17,
+      "rooms": 0,
+      "bathrooms": 1,
+      "note": "套房"
+    },
+    {
+      "size": 16,
+      "rooms": 1,
+      "bathrooms": 1,
+      "note": "1房1衛"
+    },
+    {
+      "size": 21,
+      "rooms": 1,
+      "bathrooms": 1,
+      "note": "1房1衛"
+    },
+    {
+      "size": 22,
+      "rooms": 2,
+      "bathrooms": 1,
+      "note": "2房"
+    },
+    {
+      "size": 32,
+      "rooms": 2,
+      "bathrooms": 2,
+      "note": "2房"
+    },
+    {
+      "size": 33,
+      "rooms": 3,
+      "bathrooms": 2,
+      "note": "3房2衛"
+    },
+    {
+      "size": 45,
+      "rooms": 3,
+      "bathrooms": 2,
+      "note": "3房2衛"
+    }
+  ],
+  "openSaleDate": "",
+  "viewingDate": "2025-07-01",
+  "earlyBirdNote": "預計7月開放賞屋，可跟阿欽預約優先賞屋。確切開價及早鳥折扣後續提供，實際開價以現場為主。",
+  "payment": {
+    "deposit": null,
+    "stages": [],
+    "loan": null,
+    "loanEstimate": "預計2029年完工",
+    "delivery": null
+  },
+  "materials": {
+    "kitchen": "",
+    "bathroom": "",
+    "other": "SC/SRC結構、樓高3米45、防水保固20年、輕裝修規劃"
+  },
+  "images": [],
+  "postedDate": "2025-05-29",
+  "featured": true
+}

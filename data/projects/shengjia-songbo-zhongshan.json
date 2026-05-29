@@ -1,0 +1,96 @@
+{
+  "id": "shengjia-songbo-zhongshan",
+  "name": "陞家松博",
+  "city": "台北市",
+  "district": "中山區",
+  "address": "台北市中山區德惠街189、191號",
+  "type": "預售屋",
+  "description": "行天宮站生活圈新建案，規劃16~31坪｜2~3房，耐震六級AlfaSafe規劃，德國頂級廚衛配備，預計2032年完工。",
+  "highlights": [
+    "行天宮生活圈",
+    "耐震六級",
+    "AlfaSafe系統",
+    "德國LEICHT廚具",
+    "無地主戶",
+    "可客變"
+  ],
+  "sizeMin": 16,
+  "sizeMax": 31,
+  "roomsOptions": [
+    2,
+    3
+  ],
+  "bathroomsOptions": [
+    1,
+    2
+  ],
+  "unitPriceMin": null,
+  "unitPriceMax": null,
+  "totalPriceMin": null,
+  "unitPriceNote": "開價後續提供",
+  "mrtStation": "行天宮站",
+  "mrtMinutes": 11,
+  "mrtLine": "松山新店線",
+  "siteArea": 138,
+  "floors": 11,
+  "basementFloors": 3,
+  "totalUnits": 40,
+  "floorPlan": "1梯4戶",
+  "parkingSpots": 20,
+  "parkingType": "升降平面車位",
+  "parkingPrice": null,
+  "publicRatio": 36.86,
+  "hasStorefront": false,
+  "earthquake": "耐震六級",
+  "damper": "AlfaSafe耐震系統",
+  "layouts": [
+    {
+      "size": 16,
+      "rooms": 2,
+      "bathrooms": 1,
+      "note": "2房1衛"
+    },
+    {
+      "size": 18,
+      "rooms": 2,
+      "bathrooms": 1,
+      "note": "2房1衛"
+    },
+    {
+      "size": 24,
+      "rooms": 2,
+      "bathrooms": 2,
+      "note": "2房2衛"
+    },
+    {
+      "size": 31,
+      "rooms": 3,
+      "bathrooms": 2,
+      "note": "3房2衛"
+    }
+  ],
+  "openSaleDate": "",
+  "viewingDate": "2025-07-01",
+  "earlyBirdNote": "預計7月開放賞屋，可跟阿欽預約優先賞屋。開價後續提供。",
+  "payment": {
+    "deposit": 5,
+    "stages": [
+      {
+        "label": "開工款",
+        "percentage": 3,
+        "estimate": ""
+      }
+    ],
+    "loan": null,
+    "loanEstimate": "預計2032年完工",
+    "delivery": null
+  },
+  "materials": {
+    "kitchen": "德國LEICHT廚具、林內廚具、Franke洗碗機、3M淨水",
+    "bathroom": "Duravit衛浴、hansgrohe五金、美國百朗暖風機",
+    "other": "日本TOSTEM窗、6+8a+6膠合Low-E玻璃、聖戈班隔音墊、BWT全棟淨水、冠軍磁磚、美國強森木地板"
+  },
+  "images": [],
+  "postedDate": "2025-05-20",
+  "featured": false
+}
