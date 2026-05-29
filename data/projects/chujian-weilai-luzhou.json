@@ -1,49 +1,38 @@
 {
-  "id": "chujian-weilai-luzhou",
-  "name": "初見未來",
-  "city": "新北市",
-  "district": "蘆洲區",
-  "address": "新北市蘆洲區集賢路376號",
-  "type": "預售屋",
-  "description": "徐匯中學站生活圈，規劃15~35坪｜1~3房，未來北環段Y21站串接台北市AI科技聚落，樓高3米4，可客變，預計6/6開賣。",
-  "highlights": [
-    "徐匯中學站5分鐘",
-    "未來北環段Y21站",
-    "樓高3米4",
-    "可客變",
-    "抗震6級",
-    "結構外審"
-  ],
-  "sizeMin": 15,
+  "hasStorefront": false,
+  "publicRatio": 34,
+  "mrtLine": "蘆洲線",
   "sizeMax": 35,
+  "mrtStation": "徐匯中學站",
   "roomsOptions": [
     1,
     2,
     3
   ],
-  "bathroomsOptions": [
-    1,
-    2
-  ],
-  "unitPriceMin": 80,
-  "unitPriceMax": 89,
-  "totalPriceMin": null,
-  "unitPriceNote": "預估80~89萬/坪，早鳥折扣後續確認，實際價格以現場為主",
-  "mrtStation": "徐匯中學站",
-  "mrtMinutes": 5,
-  "mrtLine": "蘆洲線",
-  "siteArea": 602,
+  "payment": {
+    "deposit": 6,
+    "stages": [
+      {
+        "label": "結構體大底完成",
+        "percentage": 5,
+        "estimate": ""
+      },
+      {
+        "label": "結構3樓頂板完成",
+        "percentage": 3,
+        "estimate": ""
+      },
+      {
+        "label": "結構完成",
+        "percentage": 6,
+        "estimate": ""
+      }
+    ],
+    "loan": 75,
+    "loanEstimate": "預計2029年Q1完工",
+    "delivery": 5
+  },
   "floors": 13,
-  "basementFloors": 3,
-  "totalUnits": 124,
-  "floorPlan": "A棟1梯3戶（1:18）；B棟1梯7戶（1:42）",
-  "parkingSpots": 58,
-  "parkingType": "坡平車位",
-  "parkingPrice": null,
-  "publicRatio": 34,
-  "hasStorefront": false,
-  "earthquake": "抗震6級",
-  "damper": "",
   "layouts": [
     {
       "size": 15,
@@ -88,38 +77,51 @@
       "note": "3房2衛（現場有35坪樣品屋）"
     }
   ],
-  "openSaleDate": "2025-06-06",
   "viewingDate": "2025-05-30",
-  "earlyBirdNote": "預計6/6（六）開賣，目前已開放賞屋，可跟阿欽預約優先賞屋。家配圖請私訊索取。",
-  "payment": {
-    "deposit": 6,
-    "stages": [
-      {
-        "label": "結構體大底完成",
-        "percentage": 5,
-        "estimate": ""
-      },
-      {
-        "label": "結構3樓頂板完成",
-        "percentage": 3,
-        "estimate": ""
-      },
-      {
-        "label": "結構完成",
-        "percentage": 6,
-        "estimate": ""
-      }
-    ],
-    "loan": 75,
-    "loanEstimate": "預計2029年Q1完工",
-    "delivery": 5
-  },
+  "city": "新北市",
+  "totalUnits": 124,
+  "name": "初見未來",
   "materials": {
     "kitchen": "櫻花廚具",
     "bathroom": "INAX衛浴",
     "other": "5+5膠合玻璃、太格木地板、樓高3米4、可客變"
   },
-  "images": [],
   "postedDate": "2025-05-16",
-  "featured": false
+  "unitPriceMin": 80,
+  "earthquake": "抗震6級",
+  "damper": "",
+  "totalPriceMin": null,
+  "featured": false,
+  "earlyBirdNote": "預計6/6（六）開賣，目前已開放賞屋，可跟阿欽預約優先賞屋。家配圖請私訊索取。",
+  "district": "蘆洲區",
+  "mrtMinutes": 5,
+  "parkingPrice": null,
+  "sizeMin": 15,
+  "parkingType": "坡平車位",
+  "siteArea": 602,
+  "address": "新北市蘆洲區集賢路376號",
+  "floorPlan": "A棟1梯3戶（1:18）；B棟1梯7戶（1:42）",
+  "basementFloors": 3,
+  "unitPriceNote": "預估80~89萬/坪，早鳥折扣後續確認，實際價格以現場為主",
+  "images": [
+    "/images/projects/line_note_260530_1.jpg"
+  ],
+  "parkingSpots": 58,
+  "bathroomsOptions": [
+    1,
+    2
+  ],
+  "type": "預售屋",
+  "id": "chujian-weilai-luzhou",
+  "description": "徐匯中學站生活圈，規劃15~35坪｜1~3房，未來北環段Y21站串接台北市AI科技聚落，樓高3米4，可客變，預計6/6開賣。",
+  "unitPriceMax": 89,
+  "openSaleDate": "2025-06-06",
+  "highlights": [
+    "徐匯中學站5分鐘",
+    "未來北環段Y21站",
+    "樓高3米4",
+    "可客變",
+    "抗震6級",
+    "結構外審"
+  ]
 }
