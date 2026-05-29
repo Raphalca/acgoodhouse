@@ -25,11 +25,8 @@ function render(p) {
   document.getElementById('loading').classList.add('hidden');
   document.getElementById('content').classList.remove('hidden');
 
-  // Hero image
-  const heroImg = document.getElementById('heroImage');
-  if (p.images && p.images.length) {
-    heroImg.innerHTML = `<img src="${p.images[0]}" alt="${p.name}">`;
-  }
+  // Hero image / gallery
+  renderGallery(document.getElementById('heroImage'), p.images, p.name);
 
   // Hero body
   document.getElementById('projectName').textContent = p.name;
@@ -145,6 +142,77 @@ function renderRows(containerId, rows) {
       <span class="ir-value">${value}</span>
     </div>`
   ).join('');
+}
+
+function renderGallery(container, images, name) {
+  if (!images || images.length === 0) {
+    container.innerHTML = `
+      <div class="project-hero-img-placeholder">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </div>`;
+    return;
+  }
+
+  const total = images.length;
+
+  if (total === 1) {
+    container.innerHTML = `<div class="img-gallery"><div class="gallery-track"><div class="gallery-slide"><img src="${images[0]}" alt="${name}"></div></div></div>`;
+    return;
+  }
+
+  const slides = images.map((src, i) =>
+    `<div class="gallery-slide"><img src="${src}" alt="${name} 圖片${i + 1}" loading="${i === 0 ? 'eager' : 'lazy'}"></div>`
+  ).join('');
+
+  const dots = images.map((_, i) =>
+    `<button class="gallery-dot ${i === 0 ? 'active' : ''}" data-i="${i}" aria-label="第${i+1}張"></button>`
+  ).join('');
+
+  container.innerHTML = `
+    <div class="img-gallery" id="gallery">
+      <div class="gallery-track" id="galleryTrack">${slides}</div>
+      <button class="gallery-btn prev" id="galleryPrev" aria-label="上一張">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="gallery-btn next" id="galleryNext" aria-label="下一張">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+      <div class="gallery-dots">${dots}</div>
+      <div class="gallery-counter"><span id="galleryCurrent">1</span> / ${total}</div>
+    </div>`;
+
+  let current = 0;
+  const track = document.getElementById('galleryTrack');
+  const prevBtn = document.getElementById('galleryPrev');
+  const nextBtn = document.getElementById('galleryNext');
+  const dotBtns = container.querySelectorAll('.gallery-dot');
+  const currentLabel = document.getElementById('galleryCurrent');
+
+  function goTo(idx) {
+    current = (idx + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dotBtns.forEach((d, i) => d.classList.toggle('active', i === current));
+    currentLabel.textContent = current + 1;
+    prevBtn.style.opacity = current === 0 ? '.4' : '1';
+    nextBtn.style.opacity = current === total - 1 ? '.4' : '1';
+  }
+
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+  dotBtns.forEach(d => d.addEventListener('click', () => goTo(Number(d.dataset.i))));
+
+  // Touch swipe
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+  });
+
+  goTo(0);
 }
 
 function formatDate(str) {

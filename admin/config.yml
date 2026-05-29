@@ -329,10 +329,11 @@ collections:
                     required: false
 
               # ── 圖片 ──
-              - label: 建案圖片
+              - label: 建案圖片（最多8張）
                 name: images
                 widget: list
                 required: false
+                max: 8
                 field:
                   label: 圖片
                   name: image
