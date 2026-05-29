@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>開案時程總覽｜阿欽好房推推</title>
+  <meta name="description" content="最新建案開賣、賞屋時程一覽，透過阿欽免費預約優先賞屋。">
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .schedule-page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+    .schedule-page h1 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .schedule-intro {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+    }
+
+    .schedule-group {
+      margin-bottom: 20px;
+    }
+    .schedule-group-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      background: var(--primary);
+      color: white;
+      border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .schedule-group-header .star { font-size: 16px; }
+
+    .schedule-items {
+      background: white;
+      border: 1px solid var(--border);
+      border-top: none;
+      border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+      overflow: hidden;
+    }
+    .schedule-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 11px 16px;
+      border-bottom: 1px solid var(--bg-filter);
+      font-size: 14px;
+      transition: background .15s;
+    }
+    .schedule-item:last-child { border-bottom: none; }
+    .schedule-item:hover { background: var(--bg); }
+
+    .item-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+
+    .item-district {
+      flex-shrink: 0;
+      font-size: 12px;
+      font-weight: 700;
+      color: white;
+      background: var(--primary-light);
+      padding: 2px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .item-name {
+      font-weight: 600;
+      color: var(--text);
+      flex: 1;
+    }
+    .item-event {
+      flex-shrink: 0;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 9px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .event-sale {
+      background: #FEF3C7;
+      color: #92400E;
+    }
+    .event-view {
+      background: #D1FAE5;
+      color: #065F46;
+    }
+
+    /* CTA at bottom */
+    .schedule-cta {
+      margin-top: 32px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .schedule-cta h3 {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .schedule-cta p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      line-height: 1.7;
+    }
+    .cta-hint {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 14px;
+    }
+    .cta-hint strong { color: var(--text); }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="/">
+      <img src="/images/logo.png" alt="阿欽好房推推">
+      <span class="logo-text">阿欽好房推推</span>
+    </a>
+    <nav>
+      <a href="/">建案總覽</a>
+      <a href="/schedule.html" class="active hide-mobile">開案時程</a>
+      <a href="/about.html" class="hide-mobile">關於阿欽</a>
+      <a href="https://lin.ee/UndYv1Z" target="_blank" rel="noopener" class="nav-cta">
+        📲 預約賞屋
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="schedule-page">
+    <h1>📅 開案時程總覽</h1>
+    <p class="schedule-intro">整理最新建案開賣 &amp; 賞屋時間，透過阿欽預約可爭取優先賞屋名額。</p>
+
+    <!-- 預計7月 -->
+    <div class="schedule-group">
+      <div class="schedule-group-header">
+        <span class="star">⭐</span> 預計 7 月
+      </div>
+      <div class="schedule-items">
+        <div class="schedule-item">
+          <span class="item-district">南港</span>
+          <span class="item-name">南港之星</span>
+          <span class="item-event event-view">開放賞屋</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">中山</span>
+          <span class="item-name">陞家松博</span>
+          <span class="item-event event-view">開放賞屋</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">大同</span>
+          <span class="item-name">力銘建設大同案</span>
+          <span class="item-event event-view">開放賞屋</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 預計6月 -->
+    <div class="schedule-group">
+      <div class="schedule-group-header">
+        <span class="star">⭐</span> 預計 6 月
+      </div>
+      <div class="schedule-items">
+        <div class="schedule-item">
+          <span class="item-district">內湖</span>
+          <span class="item-name">友座詠青</span>
+          <span class="item-event event-sale">6月中 早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">三重</span>
+          <span class="item-name">寶石3－寶石敦岳</span>
+          <span class="item-event event-sale">6月中下旬 早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">淡水</span>
+          <span class="item-name">新海城二期</span>
+          <span class="item-event event-sale">6月下旬 早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">新莊</span>
+          <span class="item-name">傳家雙鼎園</span>
+          <span class="item-event event-sale">6月下旬 早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">信義</span>
+          <span class="item-name">國美森遇</span>
+          <span class="item-event event-view">6月初 開放賞屋</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">北投</span>
+          <span class="item-name">聯上和煦</span>
+          <span class="item-event event-view">6月中 開放賞屋</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">三重</span>
+          <span class="item-name">全坤雙星</span>
+          <span class="item-event event-view">6月中 開放賞屋</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">中正</span>
+          <span class="item-name">潤泰菁英匯</span>
+          <span class="item-event event-view">開放賞屋</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6/13 -->
+    <div class="schedule-group">
+      <div class="schedule-group-header">
+        <span class="star">⭐</span> 6/13（六）
+      </div>
+      <div class="schedule-items">
+        <div class="schedule-item">
+          <span class="item-district">新店</span>
+          <span class="item-name">華垿</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6/6 -->
+    <div class="schedule-group">
+      <div class="schedule-group-header">
+        <span class="star">⭐</span> 6/6（六）
+      </div>
+      <div class="schedule-items">
+        <div class="schedule-item">
+          <span class="item-district">蘆洲</span>
+          <span class="item-name">初見未來</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5/30 -->
+    <div class="schedule-group">
+      <div class="schedule-group-header">
+        <span class="star">⭐</span> 5/30（六）
+      </div>
+      <div class="schedule-items">
+        <div class="schedule-item">
+          <span class="item-district">內湖</span>
+          <span class="item-name">友座詠青</span>
+          <span class="item-event event-view">開放賞屋</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5/23 -->
+    <div class="schedule-group">
+      <div class="schedule-group-header">
+        <span class="star">⭐</span> 5/23（六）
+      </div>
+      <div class="schedule-items">
+        <div class="schedule-item">
+          <span class="item-district">中山</span>
+          <span class="item-name">佳元瑞吉</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">蘆洲</span>
+          <span class="item-name">忠孝青隱</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">淡水</span>
+          <span class="item-name">光全御苑</span>
+          <span class="item-event event-sale">5/24（日）早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">中和</span>
+          <span class="item-name">寶亞世界公館</span>
+          <span class="item-event event-view">開放賞屋</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">蘆洲</span>
+          <span class="item-name">初見未來</span>
+          <span class="item-event event-view">開放賞屋</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">信義</span>
+          <span class="item-name">國美馥遇</span>
+          <span class="item-event event-view">開放賞屋</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5/16 -->
+    <div class="schedule-group">
+      <div class="schedule-group-header">
+        <span class="star">⭐</span> 5/16（六）
+      </div>
+      <div class="schedule-items">
+        <div class="schedule-item">
+          <span class="item-district">大同</span>
+          <span class="item-name">台北天河</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">新莊</span>
+          <span class="item-name">永恆之新</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">三重</span>
+          <span class="item-name">森觀</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">三重</span>
+          <span class="item-name">寶石3－寶石敦岳</span>
+          <span class="item-event event-view">開放賞屋</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5/1 -->
+    <div class="schedule-group">
+      <div class="schedule-group-header">
+        <span class="star">⭐</span> 5/1（五）
+      </div>
+      <div class="schedule-items">
+        <div class="schedule-item">
+          <span class="item-district">三重</span>
+          <span class="item-name">環泥水蓉</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">三重</span>
+          <span class="item-name">暉騰靚（集美）</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">中和</span>
+          <span class="item-name">昇陽國旭</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">大安</span>
+          <span class="item-name">大陸衡昀</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">北投</span>
+          <span class="item-name">力銘耘山</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">大同</span>
+          <span class="item-name">台北天河</span>
+          <span class="item-event event-view">開放賞屋</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4/18 -->
+    <div class="schedule-group">
+      <div class="schedule-group-header">
+        <span class="star">⭐</span> 4/18（六）
+      </div>
+      <div class="schedule-items">
+        <div class="schedule-item">
+          <span class="item-district">北投</span>
+          <span class="item-name">遠雄明玥</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">三重</span>
+          <span class="item-name">暉騰昕（仁義）</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">三重</span>
+          <span class="item-name">暉騰靚（集美）</span>
+          <span class="item-event event-view">開放賞屋</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4/3 -->
+    <div class="schedule-group">
+      <div class="schedule-group-header">
+        <span class="star">⭐</span> 4/3（五）
+      </div>
+      <div class="schedule-items">
+        <div class="schedule-item">
+          <span class="item-district">文山</span>
+          <span class="item-name">上陽羅斯福</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">文山</span>
+          <span class="item-name">友座大學之道</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">三重</span>
+          <span class="item-name">東煒玉川</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">土城</span>
+          <span class="item-name">福容雙捷A+</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">七堵</span>
+          <span class="item-name">暉騰織光霽</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">淡水</span>
+          <span class="item-name">光全御苑</span>
+          <span class="item-event event-view">開放賞屋</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3/28 -->
+    <div class="schedule-group">
+      <div class="schedule-group-header">
+        <span class="star">⭐</span> 3/28（六）
+      </div>
+      <div class="schedule-items">
+        <div class="schedule-item">
+          <span class="item-district">板橋</span>
+          <span class="item-name">遠雄合雅</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">新莊</span>
+          <span class="item-name">玄泰蔦居</span>
+          <span class="item-event event-sale">早鳥開賣</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">板橋</span>
+          <span class="item-name">皇翔寶格利</span>
+          <span class="item-event event-view">開放賞屋</span>
+        </div>
+        <div class="schedule-item">
+          <span class="item-district">中和</span>
+          <span class="item-name">昇陽國旭</span>
+          <span class="item-event event-view">開放賞屋</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="schedule-cta">
+      <h3>🏠 免費預約優先賞屋</h3>
+      <p>
+        看到有興趣的建案？加入阿欽的 Line 官方帳號，<br>
+        私訊即可免費預約，有機會享有優先賞屋與早鳥優惠。
+      </p>
+      <a class="btn-line" href="https://lin.ee/UndYv1Z" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+        </svg>
+        加入 Line 預約賞屋
+      </a>
+      <p class="cta-hint">
+        私訊 <strong>建案名稱、姓名、電話</strong> 即可預約，完全免費 🙏
+      </p>
+    </div>
+
+  </div>
+</main>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">🏠 阿欽好房推推</div>
+      <div class="footer-tagline">我也想要有個家</div>
+    </div>
+    <nav class="footer-nav">
+      <a href="/">建案總覽</a>
+      <a href="/schedule.html">開案時程</a>
+      <a href="/about.html">關於阿欽</a>
+      <a href="https://lin.ee/UndYv1Z" target="_blank" rel="noopener">預約賞屋（Line）</a>
+      <a href="https://line.me/ti/g2/VxZnBZgPuC8QQO1JbChsbgIZFCAFGrbEiuoVcQ" target="_blank" rel="noopener">加入 Line 社群</a>
+      <a href="https://www.threads.com/@ac.goodhouse" target="_blank" rel="noopener">Threads</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    © 2025 阿欽好房推推｜資料僅供參考，實際售價以現場為準
+  </div>
+</footer>
+
+</body>
+</html>

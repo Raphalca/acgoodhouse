@@ -1,0 +1,350 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: images/projects
+public_folder: /images/projects
+
+locale: zh_Hant
+
+collections:
+  - name: projects
+    label: 建案管理
+    files:
+      - label: 建案列表
+        name: projects_list
+        file: data/projects.json
+        format: json
+        fields:
+          - label: 建案列表
+            name: projects
+            widget: list
+            summary: "{{fields.name}} — {{fields.city}}{{fields.district}} ({{fields.type}})"
+            fields:
+
+              - label: 建案ID（英文，不可重複）
+                name: id
+                widget: string
+                hint: "小寫英文＋數字＋連字號，例如：huashu-xindian-2025"
+
+              - label: 建案名稱
+                name: name
+                widget: string
+
+              - label: 縣市
+                name: city
+                widget: select
+                options:
+                  - 台北市
+                  - 新北市
+                  - 桃園市
+                  - 台中市
+                  - 台南市
+                  - 高雄市
+                  - 新竹市
+                  - 新竹縣
+                  - 基隆市
+                  - 苗栗縣
+                  - 彰化縣
+                  - 南投縣
+                  - 雲林縣
+                  - 嘉義市
+                  - 嘉義縣
+                  - 屏東縣
+                  - 宜蘭縣
+                  - 花蓮縣
+                  - 台東縣
+
+              - label: 行政區
+                name: district
+                widget: string
+                hint: "例如：新店區、信義區"
+
+              - label: 詳細地址
+                name: address
+                widget: string
+
+              - label: 建案類型
+                name: type
+                widget: select
+                options:
+                  - 預售屋
+                  - 新成屋
+                  - 中古屋
+
+              - label: 建案簡介
+                name: description
+                widget: text
+                required: false
+
+              - label: 亮點標籤
+                name: highlights
+                widget: list
+                required: false
+                field:
+                  label: 亮點
+                  name: highlight
+                  widget: string
+                hint: "例如：戶戶採光、捷運5分鐘、耐震6級"
+
+              # ── 坪數 & 價格 ──
+              - label: 最小權狀坪數
+                name: sizeMin
+                widget: number
+                value_type: float
+
+              - label: 最大權狀坪數
+                name: sizeMax
+                widget: number
+                value_type: float
+
+              - label: 房數選項
+                name: roomsOptions
+                widget: list
+                field:
+                  label: 房數
+                  name: rooms
+                  widget: number
+                  value_type: int
+                hint: "填入此建案有哪幾種房數，例如：2、3"
+
+              - label: 衛浴數選項
+                name: bathroomsOptions
+                widget: list
+                field:
+                  label: 衛浴數
+                  name: bathrooms
+                  widget: number
+                  value_type: int
+
+              - label: 最低單價（萬/坪）
+                name: unitPriceMin
+                widget: number
+                value_type: float
+
+              - label: 最高單價（萬/坪）
+                name: unitPriceMax
+                widget: number
+                value_type: float
+
+              - label: 總價起（萬）
+                name: totalPriceMin
+                widget: number
+                value_type: int
+
+              # ── 捷運 ──
+              - label: 最近捷運站
+                name: mrtStation
+                widget: string
+                required: false
+                hint: "例如：新店區公所站"
+
+              - label: 捷運步行分鐘
+                name: mrtMinutes
+                widget: number
+                value_type: int
+                required: false
+
+              - label: 捷運線
+                name: mrtLine
+                widget: string
+                required: false
+                hint: "例如：新店線、板南線"
+
+              # ── 基地 ──
+              - label: 基地坪數
+                name: siteArea
+                widget: number
+                value_type: float
+                required: false
+
+              # ── 建案資訊 ──
+              - label: 地上樓層
+                name: floors
+                widget: number
+                value_type: int
+
+              - label: 地下樓層
+                name: basementFloors
+                widget: number
+                value_type: int
+                default: 0
+
+              - label: 總戶數
+                name: totalUnits
+                widget: number
+                value_type: int
+
+              - label: 梯戶比
+                name: floorPlan
+                widget: string
+                required: false
+                hint: "例如：1梯3戶"
+
+              - label: 車位數量
+                name: parkingSpots
+                widget: number
+                value_type: int
+                required: false
+
+              - label: 車位類型
+                name: parkingType
+                widget: string
+                required: false
+                hint: "例如：倉儲車位、平面車位、機械車位"
+
+              - label: 車位價格（萬）
+                name: parkingPrice
+                widget: number
+                value_type: int
+                required: false
+
+              - label: 公設比（%）
+                name: publicRatio
+                widget: number
+                value_type: float
+                required: false
+
+              - label: 有無店面
+                name: hasStorefront
+                widget: boolean
+                default: false
+
+              - label: 耐震等級
+                name: earthquake
+                widget: string
+                required: false
+                hint: "例如：耐震6級"
+
+              - label: 制震系統
+                name: damper
+                widget: string
+                required: false
+                hint: "例如：日本住友制震、黏滯阻尼器"
+
+              # ── 格局明細 ──
+              - label: 格局明細
+                name: layouts
+                widget: list
+                required: false
+                fields:
+                  - label: 坪數
+                    name: size
+                    widget: number
+                    value_type: float
+                  - label: 房數
+                    name: rooms
+                    widget: number
+                    value_type: int
+                  - label: 衛浴數
+                    name: bathrooms
+                    widget: number
+                    value_type: int
+                  - label: 說明
+                    name: note
+                    widget: string
+                    required: false
+                    hint: "例如：2房1衛、主臥套房"
+
+              # ── 銷售資訊 ──
+              - label: 開賣日期
+                name: openSaleDate
+                widget: date
+                required: false
+                format: YYYY-MM-DD
+
+              - label: 開放賞屋日期
+                name: viewingDate
+                widget: date
+                required: false
+                format: YYYY-MM-DD
+
+              - label: 早鳥／優惠說明
+                name: earlyBirdNote
+                widget: text
+                required: false
+
+              # ── 付款方式 ──
+              - label: 付款方式
+                name: payment
+                widget: object
+                required: false
+                fields:
+                  - label: 訂簽款（%）
+                    name: deposit
+                    widget: number
+                    value_type: int
+                    required: false
+                  - label: 中間付款期
+                    name: stages
+                    widget: list
+                    required: false
+                    fields:
+                      - label: 名稱
+                        name: label
+                        widget: string
+                        hint: "例如：使照申請、使照取得"
+                      - label: 百分比（%）
+                        name: percentage
+                        widget: number
+                        value_type: int
+                      - label: 預計時間
+                        name: estimate
+                        widget: string
+                        required: false
+                        hint: "例如：2026年Q4"
+                  - label: 貸款（%）
+                    name: loan
+                    widget: number
+                    value_type: int
+                    required: false
+                  - label: 貸款交屋預計時間
+                    name: loanEstimate
+                    widget: string
+                    required: false
+                    hint: "例如：2027年Q3交屋"
+                  - label: 交屋款（%）
+                    name: delivery
+                    widget: number
+                    value_type: int
+                    required: false
+
+              # ── 建材配備 ──
+              - label: 建材配備
+                name: materials
+                widget: object
+                required: false
+                fields:
+                  - label: 廚具
+                    name: kitchen
+                    widget: string
+                    required: false
+                  - label: 衛浴
+                    name: bathroom
+                    widget: string
+                    required: false
+                  - label: 其他
+                    name: other
+                    widget: string
+                    required: false
+
+              # ── 圖片 ──
+              - label: 建案圖片
+                name: images
+                widget: list
+                required: false
+                field:
+                  label: 圖片
+                  name: image
+                  widget: image
+
+              # ── Meta ──
+              - label: 上架日期
+                name: postedDate
+                widget: date
+                format: YYYY-MM-DD
+
+              - label: 精選建案（置頂顯示）
+                name: featured
+                widget: boolean
+                default: false

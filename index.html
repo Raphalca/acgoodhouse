@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>阿欽好房推推｜新建案資訊平台</title>
+  <meta name="description" content="阿欽好房推推 — 集結最新預售屋、新成屋建案資訊，強大篩選功能，透過阿欽預約優先賞屋。">
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="/">
+      <img src="/images/logo.png" alt="阿欽好房推推">
+      <span class="logo-text">阿欽好房推推</span>
+    </a>
+    <nav>
+      <a href="/" class="active">建案總覽</a>
+      <a href="/schedule.html" class="hide-mobile">開案時程</a>
+      <a href="/about.html" class="hide-mobile">關於阿欽</a>
+      <a href="https://lin.ee/UndYv1Z" target="_blank" rel="noopener" class="nav-cta">
+        📲 預約賞屋
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── Main ── -->
+<main>
+  <div class="page-container">
+
+    <div class="listing-top">
+      <h1>最新建案 <span id="resultCount">—</span> 筆</h1>
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+        <select id="sortSelect" class="sort-select">
+          <option value="newest">最新上架</option>
+          <option value="price_asc">總價低→高</option>
+          <option value="price_desc">總價高→低</option>
+          <option value="size_asc">坪數小→大</option>
+          <option value="size_desc">坪數大→小</option>
+        </select>
+        <button class="mobile-filter-btn" id="mobileFilterBtn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="4" y1="6" x2="20" y2="6"/>
+            <line x1="4" y1="12" x2="14" y2="12"/>
+            <line x1="4" y1="18" x2="10" y2="18"/>
+          </svg>
+          篩選
+        </button>
+      </div>
+    </div>
+
+    <div class="listing-layout">
+
+      <!-- ── Filter Panel ── -->
+      <aside class="filter-panel" id="filterPanel">
+        <div class="filter-panel-header">
+          <h2>🔍 篩選條件</h2>
+          <button class="filter-reset" id="filterReset">全部清除</button>
+        </div>
+
+        <!-- Mobile close -->
+        <div class="filter-panel-close-btn" style="display:none" id="filterCloseBtnWrap">
+          <button id="filterClose" style="padding:6px 16px;border:1px solid var(--border);border-radius:20px;background:white;font-size:13px;cursor:pointer;font-family:inherit;">
+            ✕ 關閉
+          </button>
+        </div>
+
+        <!-- 縣市 -->
+        <div class="filter-section">
+          <div class="filter-label">縣市</div>
+          <select id="filterCity" class="filter-select">
+            <option value="">全部縣市</option>
+          </select>
+        </div>
+
+        <!-- 行政區 -->
+        <div class="filter-section">
+          <div class="filter-label">行政區</div>
+          <select id="filterDistrict" class="filter-select">
+            <option value="">全部行政區</option>
+          </select>
+        </div>
+
+        <!-- 建案狀態 -->
+        <div class="filter-section">
+          <div class="filter-label">建案狀態</div>
+          <div class="chip-group">
+            <span class="chip" data-group="type" data-value="預售屋">預售屋</span>
+            <span class="chip" data-group="type" data-value="新成屋">新成屋</span>
+            <span class="chip" data-group="type" data-value="中古屋">中古屋</span>
+          </div>
+        </div>
+
+        <!-- 捷運距離 -->
+        <div class="filter-section">
+          <div class="filter-label">捷運距離</div>
+          <div class="radio-group">
+            <label><input type="radio" name="mrt" value="" checked> 不限</label>
+            <label><input type="radio" name="mrt" value="5"> 5 分鐘內</label>
+            <label><input type="radio" name="mrt" value="10"> 10 分鐘內</label>
+            <label><input type="radio" name="mrt" value="20"> 20 分鐘內</label>
+          </div>
+        </div>
+
+        <!-- 權狀坪數 -->
+        <div class="filter-section">
+          <div class="filter-label">權狀坪數</div>
+          <div class="range-row">
+            <input type="number" id="sizeMin" class="range-input" placeholder="最小" min="0" step="1">
+            <span>~</span>
+            <input type="number" id="sizeMax" class="range-input" placeholder="最大" min="0" step="1">
+          </div>
+          <div class="range-unit">單位：坪</div>
+        </div>
+
+        <!-- 總價 -->
+        <div class="filter-section">
+          <div class="filter-label">總價（萬）</div>
+          <div class="range-row">
+            <input type="number" id="priceMin" class="range-input" placeholder="最低" min="0" step="100">
+            <span>~</span>
+            <input type="number" id="priceMax" class="range-input" placeholder="最高" min="0" step="100">
+          </div>
+          <div class="range-unit">單位：萬元</div>
+        </div>
+
+        <!-- 房數 -->
+        <div class="filter-section">
+          <div class="filter-label">房數</div>
+          <div class="chip-group">
+            <span class="chip" data-group="rooms" data-value="1">1 房</span>
+            <span class="chip" data-group="rooms" data-value="2">2 房</span>
+            <span class="chip" data-group="rooms" data-value="3">3 房</span>
+            <span class="chip" data-group="rooms" data-value="4">4+ 房</span>
+          </div>
+        </div>
+
+        <!-- 衛浴 -->
+        <div class="filter-section">
+          <div class="filter-label">衛浴數</div>
+          <div class="chip-group">
+            <span class="chip" data-group="bathrooms" data-value="1">1 衛</span>
+            <span class="chip" data-group="bathrooms" data-value="2">2 衛</span>
+            <span class="chip" data-group="bathrooms" data-value="3">3+ 衛</span>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- ── Project Area ── -->
+      <div class="projects-area">
+        <div class="active-filters" id="activeFilters"></div>
+        <div class="project-grid" id="projectGrid">
+          <!-- Cards rendered by JS -->
+          <div style="padding:40px;color:var(--text-muted);font-size:14px;">載入中...</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">🏠 阿欽好房推推</div>
+      <div class="footer-tagline">我也想要有個家</div>
+    </div>
+    <nav class="footer-nav">
+      <a href="/">建案總覽</a>
+      <a href="/schedule.html">開案時程</a>
+      <a href="/about.html">關於阿欽</a>
+      <a href="https://lin.ee/UndYv1Z" target="_blank" rel="noopener">預約賞屋（Line）</a>
+      <a href="https://line.me/ti/g2/VxZnBZgPuC8QQO1JbChsbgIZFCAFGrbEiuoVcQ" target="_blank" rel="noopener">加入 Line 社群</a>
+      <a href="https://www.threads.com/@ac.goodhouse" target="_blank" rel="noopener">Threads</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    © 2025 阿欽好房推推｜資料僅供參考，實際售價以現場為準
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+<script>
+  // Show mobile close button on small screens
+  if (window.innerWidth <= 900) {
+    document.getElementById('filterCloseBtnWrap').style.display = 'flex';
+  }
+</script>
+</body>
+</html>
