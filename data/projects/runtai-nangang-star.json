@@ -54,37 +54,37 @@
       "size": 16,
       "rooms": 1,
       "bathrooms": 1,
-      "note": "1房1衛"
+      "note": ""
     },
     {
       "size": 21,
       "rooms": 1,
       "bathrooms": 1,
-      "note": "1房1衛"
+      "note": ""
     },
     {
       "size": 22,
       "rooms": 2,
       "bathrooms": 1,
-      "note": "2房"
+      "note": ""
     },
     {
       "size": 32,
       "rooms": 2,
       "bathrooms": 2,
-      "note": "2房"
+      "note": ""
     },
     {
       "size": 33,
       "rooms": 3,
       "bathrooms": 2,
-      "note": "3房2衛"
+      "note": ""
     },
     {
       "size": 45,
       "rooms": 3,
       "bathrooms": 2,
-      "note": "3房2衛"
+      "note": ""
     }
   ],
   "openSaleDate": "",

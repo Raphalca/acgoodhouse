@@ -38,43 +38,43 @@
       "size": 15,
       "rooms": 1,
       "bathrooms": 1,
-      "note": "1房1衛"
+      "note": ""
     },
     {
       "size": 21,
       "rooms": 2,
       "bathrooms": 1,
-      "note": "2房1衛"
+      "note": ""
     },
     {
       "size": 24,
       "rooms": 2,
       "bathrooms": 2,
-      "note": "2房2衛"
+      "note": ""
     },
     {
       "size": 26,
       "rooms": 2,
       "bathrooms": 1,
-      "note": "2房1衛"
+      "note": ""
     },
     {
       "size": 28,
       "rooms": 2,
       "bathrooms": 2,
-      "note": "2房2衛"
+      "note": ""
     },
     {
       "size": 33,
       "rooms": 3,
       "bathrooms": 2,
-      "note": "3房2衛"
+      "note": ""
     },
     {
       "size": 35,
       "rooms": 3,
       "bathrooms": 2,
-      "note": "3房2衛（現場有35坪樣品屋）"
+      "note": "現場有35坪樣品屋"
     }
   ],
   "viewingDate": "2025-05-30",

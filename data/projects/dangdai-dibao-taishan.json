@@ -47,25 +47,25 @@
       "size": 27,
       "rooms": 2,
       "bathrooms": 2,
-      "note": "2房2衛"
+      "note": ""
     },
     {
       "size": 34,
       "rooms": 3,
       "bathrooms": 2,
-      "note": "3房2衛"
+      "note": ""
     },
     {
       "size": 40,
       "rooms": 3,
       "bathrooms": 2,
-      "note": "3房2衛"
+      "note": ""
     },
     {
       "size": 41,
       "rooms": 3,
       "bathrooms": 2,
-      "note": "3房2衛"
+      "note": ""
     }
   ],
   "openSaleDate": "",

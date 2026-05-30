@@ -14,10 +14,8 @@ const state = {
   mrtMax: null,           // 5 | 10 | 20 | null
   sizeMin: '',
   sizeMax: '',
-  priceMin: '',
-  priceMax: '',
   rooms: new Set(),       // 1 2 3 4(=4+)
-  bathrooms: new Set(),   // 1 2 3(=3+)
+  bathrooms: new Set(),   // 1 1.5 2 3(=3+)
   sort: 'newest',
 };
 
@@ -73,14 +71,15 @@ function applyFilters() {
     }
     if (state.sizeMin !== '' && p.sizeMax < Number(state.sizeMin)) return false;
     if (state.sizeMax !== '' && p.sizeMin > Number(state.sizeMax)) return false;
-    if (state.priceMin !== '' && p.totalPriceMin < Number(state.priceMin)) return false;
-    if (state.priceMax !== '' && p.totalPriceMin > Number(state.priceMax)) return false;
     if (state.rooms.size) {
       const match = p.roomsOptions.some(r => state.rooms.has(r >= 4 ? 4 : r));
       if (!match) return false;
     }
     if (state.bathrooms.size) {
-      const match = p.bathroomsOptions.some(b => state.bathrooms.has(b >= 3 ? 3 : b));
+      const match = p.bathroomsOptions.some(b => {
+        const key = b >= 3 ? 3 : b;
+        return state.bathrooms.has(key) || state.bathrooms.has(Number(key));
+      });
       if (!match) return false;
     }
     return true;
@@ -135,7 +134,13 @@ function cardHTML(p) {
   const mrtText = p.mrtStation
     ? `<span>${p.mrtStation} 步行 ${p.mrtMinutes} 分鐘</span>` : '';
 
-  const tags = (p.highlights || []).slice(0, 3).map(h => `<span class="tag">${h}</span>`).join('');
+  // 自動從 description 抓生活圈標籤
+  const allHighlights = [...(p.highlights || [])];
+  const lifeCircleMatch = (p.description || '').match(/[一-鿿]{1,10}生活圈/);
+  if (lifeCircleMatch && !allHighlights.some(h => h.includes('生活圈'))) {
+    allHighlights.unshift(lifeCircleMatch[0]);
+  }
+  const tags = allHighlights.slice(0, 3).map(h => `<span class="tag">${h}</span>`).join('');
 
   return `
     <a class="project-card" href="/project.html?id=${p.id}">
@@ -224,7 +229,6 @@ function resetFilters() {
   state.city = ''; state.district = '';
   state.type.clear(); state.mrtMax = null;
   state.sizeMin = ''; state.sizeMax = '';
-  state.priceMin = ''; state.priceMax = '';
   state.rooms.clear(); state.bathrooms.clear();
 
   document.getElementById('filterCity').value = '';
@@ -232,7 +236,7 @@ function resetFilters() {
   updateDistrictOptions();
   document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
   document.querySelector('input[name="mrt"][value=""]').checked = true;
-  ['sizeMin','sizeMax','priceMin','priceMax'].forEach(id => document.getElementById(id).value = '');
+  ['sizeMin','sizeMax'].forEach(id => document.getElementById(id).value = '');
   applyFilters();
 }
 
@@ -286,14 +290,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Size range
   ['sizeMin','sizeMax'].forEach(id => {
-    document.getElementById(id).addEventListener('input', e => {
-      state[id] = e.target.value;
-      applyFilters();
-    });
-  });
-
-  // Price range
-  ['priceMin','priceMax'].forEach(id => {
     document.getElementById(id).addEventListener('input', e => {
       state[id] = e.target.value;
       applyFilters();

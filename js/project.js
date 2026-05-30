@@ -57,7 +57,7 @@ function render(p) {
   const saleRows = [];
   if (p.openSaleDate) saleRows.push(['開賣日期', formatDate(p.openSaleDate)]);
   if (p.viewingDate) saleRows.push(['開放賞屋', formatDate(p.viewingDate)]);
-  if (p.earlyBirdNote) saleRows.push(['優惠說明', p.earlyBirdNote]);
+  if (p.earlyBirdNote) saleRows.push(['優惠說明', p.earlyBirdNote, true]);
   renderRows('saleInfo', saleRows);
 
   // Site info
@@ -136,12 +136,31 @@ function renderRows(containerId, rows) {
   const el = document.getElementById(containerId);
   if (!el) return;
   if (rows.length === 0) { el.closest('.info-card').classList.add('hidden'); return; }
-  el.innerHTML = rows.map(([label, value]) =>
+  el.innerHTML = rows.map(([label, value, highlight]) =>
     `<div class="info-row">
       <span class="ir-label">${label}</span>
-      <span class="ir-value">${value}</span>
+      <span class="ir-value${highlight ? ' ir-highlight' : ''}">${value}</span>
     </div>`
   ).join('');
+}
+
+function openLightbox(src, alt) {
+  const lb = document.createElement('div');
+  lb.className = 'lightbox';
+  lb.innerHTML = `
+    <button class="lightbox-close" aria-label="關閉">✕</button>
+    <img src="${src}" alt="${alt}">`;
+  document.body.appendChild(lb);
+  document.body.style.overflow = 'hidden';
+  lb.addEventListener('click', e => {
+    if (e.target === lb || e.target.classList.contains('lightbox-close')) {
+      lb.remove();
+      document.body.style.overflow = '';
+    }
+  });
+  document.addEventListener('keydown', function esc(e) {
+    if (e.key === 'Escape') { lb.remove(); document.body.style.overflow = ''; document.removeEventListener('keydown', esc); }
+  });
 }
 
 function renderGallery(container, images, name) {
@@ -159,7 +178,7 @@ function renderGallery(container, images, name) {
   const total = images.length;
 
   if (total === 1) {
-    container.innerHTML = `<div class="img-gallery"><div class="gallery-track"><div class="gallery-slide"><img src="${images[0]}" alt="${name}"></div></div></div>`;
+    container.innerHTML = `<div class="img-gallery"><div class="gallery-track"><div class="gallery-slide"><img src="${images[0]}" alt="${name}" style="cursor:zoom-in" onclick="openLightbox('${images[0]}','${name}')"></div></div></div>`;
     return;
   }
 
@@ -213,6 +232,15 @@ function renderGallery(container, images, name) {
   });
 
   goTo(0);
+
+  // 點擊圖片放大
+  container.querySelectorAll('.gallery-slide img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', e => {
+      e.stopPropagation();
+      openLightbox(img.src, img.alt);
+    });
+  });
 }
 
 function formatDate(str) {

@@ -46,19 +46,19 @@
       "size": 21,
       "rooms": 2,
       "bathrooms": 1,
-      "note": "2房1衛"
+      "note": ""
     },
     {
       "size": 25,
       "rooms": 2,
       "bathrooms": 1,
-      "note": "2房1衛"
+      "note": ""
     },
     {
       "size": 26,
       "rooms": 2,
       "bathrooms": 2,
-      "note": "2房2衛"
+      "note": ""
     }
   ],
   "openSaleDate": "2025-06-13",

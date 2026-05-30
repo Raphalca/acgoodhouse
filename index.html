@@ -18,9 +18,9 @@
       <span class="logo-text">阿欽好房推推</span>
     </a>
     <nav>
+      <a href="/about.html">關於阿欽</a>
       <a href="/" class="active">建案總覽</a>
-      <a href="/schedule.html" class="hide-mobile">開案時程</a>
-      <a href="/about.html" class="hide-mobile">關於阿欽</a>
+      <a href="/schedule.html">開案時程</a>
       <a href="https://lin.ee/UndYv1Z" target="_blank" rel="noopener" class="nav-cta">
         📲 預約賞屋
       </a>
@@ -85,9 +85,9 @@
           </select>
         </div>
 
-        <!-- 建案狀態 -->
+        <!-- 建案種類 -->
         <div class="filter-section">
-          <div class="filter-label">建案狀態</div>
+          <div class="filter-label">建案種類</div>
           <div class="chip-group">
             <span class="chip" data-group="type" data-value="預售屋">預售屋</span>
             <span class="chip" data-group="type" data-value="新成屋">新成屋</span>
@@ -97,7 +97,7 @@
 
         <!-- 捷運距離 -->
         <div class="filter-section">
-          <div class="filter-label">捷運距離</div>
+          <div class="filter-label">捷運站步行時間</div>
           <div class="radio-group">
             <label><input type="radio" name="mrt" value="" checked> 不限</label>
             <label><input type="radio" name="mrt" value="5"> 5 分鐘內</label>
@@ -117,17 +117,6 @@
           <div class="range-unit">單位：坪</div>
         </div>
 
-        <!-- 總價 -->
-        <div class="filter-section">
-          <div class="filter-label">總價（萬）</div>
-          <div class="range-row">
-            <input type="number" id="priceMin" class="range-input" placeholder="最低" min="0" step="100">
-            <span>~</span>
-            <input type="number" id="priceMax" class="range-input" placeholder="最高" min="0" step="100">
-          </div>
-          <div class="range-unit">單位：萬元</div>
-        </div>
-
         <!-- 房數 -->
         <div class="filter-section">
           <div class="filter-label">房數</div>
@@ -144,6 +133,7 @@
           <div class="filter-label">衛浴數</div>
           <div class="chip-group">
             <span class="chip" data-group="bathrooms" data-value="1">1 衛</span>
+            <span class="chip" data-group="bathrooms" data-value="1.5">1.5 衛</span>
             <span class="chip" data-group="bathrooms" data-value="2">2 衛</span>
             <span class="chip" data-group="bathrooms" data-value="3">3+ 衛</span>
           </div>

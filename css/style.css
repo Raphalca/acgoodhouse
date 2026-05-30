@@ -872,11 +872,75 @@ footer {
 }
 
 @media (max-width: 640px) {
-  .header-inner { padding: 0 14px; }
-  nav a.hide-mobile { display: none; }
+  .header-inner { padding: 0 12px; gap: 8px; }
+  /* 手機導覽列可橫向滑動 */
+  nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex-shrink: 1;
+    min-width: 0;
+    gap: 2px;
+  }
+  nav::-webkit-scrollbar { display: none; }
+  nav a {
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 5px 10px;
+    flex-shrink: 0;
+  }
+  .nav-cta { flex-shrink: 0; font-size: 12px; padding: 6px 10px; }
   .footer-inner { grid-template-columns: 1fr; }
   .footer-nav { align-items: flex-start; }
   .listing-top h1 { font-size: 17px; }
   .project-title { font-size: 24px; }
   .project-hero-top { flex-direction: column; gap: 8px; }
+}
+
+/* ── Lightbox ── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.93);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  cursor: zoom-out;
+  animation: lb-in .2s ease;
+}
+@keyframes lb-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.lightbox img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 4px;
+  cursor: default;
+  box-shadow: 0 8px 40px rgba(0,0,0,.6);
+}
+.lightbox-close {
+  position: absolute;
+  top: 16px; right: 16px;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.15);
+  border: 1.5px solid rgba(255,255,255,.3);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s;
+}
+.lightbox-close:hover { background: rgba(255,255,255,.28); }
+
+/* ── earlyBirdNote highlight ── */
+.ir-highlight {
+  color: var(--accent) !important;
+  font-weight: 600;
 }
