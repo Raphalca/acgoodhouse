@@ -197,8 +197,6 @@ function renderActiveFilters() {
   if (state.mrtMax !== null) chips.push({ label: `捷運${state.mrtMax}分鐘內`, clear: () => { state.mrtMax = null; document.querySelector('input[name="mrt"][value=""]').checked = true; } });
   if (state.sizeMin !== '') chips.push({ label: `坪數≥${state.sizeMin}`, clear: () => { state.sizeMin = ''; document.getElementById('sizeMin').value = ''; } });
   if (state.sizeMax !== '') chips.push({ label: `坪數≤${state.sizeMax}`, clear: () => { state.sizeMax = ''; document.getElementById('sizeMax').value = ''; } });
-  if (state.priceMin !== '') chips.push({ label: `總價≥${state.priceMin}萬`, clear: () => { state.priceMin = ''; document.getElementById('priceMin').value = ''; } });
-  if (state.priceMax !== '') chips.push({ label: `總價≤${state.priceMax}萬`, clear: () => { state.priceMax = ''; document.getElementById('priceMax').value = ''; } });
   state.rooms.forEach(r => chips.push({ label: `${r === 4 ? '4+' : r}房`, clear: () => { state.rooms.delete(r); syncChips('rooms', String(r), false); } }));
   state.bathrooms.forEach(b => chips.push({ label: `${b === 3 ? '3+' : b}衛`, clear: () => { state.bathrooms.delete(b); syncChips('bathrooms', String(b), false); } }));
 
